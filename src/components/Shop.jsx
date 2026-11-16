@@ -1,9 +1,16 @@
 import Product from "./Product.jsx";
 
-function Shop() {
+function Shop({ items }) {
     return (
         <main>
-            <Product/>
+            {items.map((item) => (
+                <Product
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    imageUrl={item.image}
+                />
+            ))}
         </main>
     );
 }
