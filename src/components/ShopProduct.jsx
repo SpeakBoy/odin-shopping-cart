@@ -1,9 +1,9 @@
-function Product({ id, title, imageUrl, addToCart }) {
+function ShopProduct({ product, addToCart }) {
     return (
         <div className="product">
-            <h1>{title}</h1>
-            <img src={imageUrl} />
-            <form onSubmit={(e) => addToCart(e, id)}>
+            <h2>{product.title}</h2>
+            <img src={product.image} />
+            <form onSubmit={(e) => addToCart(e, product.id)}>
                 <label htmlFor="quantity">Quantity:</label>
                 <input id="quantity" name="quantity" type="number" min="1" defaultValue="1" />
                 <button type="submit">Add to Cart</button>
@@ -12,4 +12,4 @@ function Product({ id, title, imageUrl, addToCart }) {
     );
 }
 
-export default Product;
+export default ShopProduct;

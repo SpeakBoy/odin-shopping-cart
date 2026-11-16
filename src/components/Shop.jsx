@@ -1,16 +1,11 @@
-import Product from "./Product.jsx";
+import ShopProduct from "./ShopProduct.jsx";
 
-function Shop({ items, addToCart }) {
+function Shop({ products, addToCart }) {
     return (
         <main>
-            {items.map((item) => (
-                <Product
-                    key={item.id}
-                    id={item.id}
-                    title={item.title}
-                    imageUrl={item.image}
-                    addToCart={addToCart}
-                />
+            <h1>Shop Products</h1>
+            {products.map((product) => (
+                <ShopProduct key={product.id} product={product} addToCart={addToCart} />
             ))}
         </main>
     );
