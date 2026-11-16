@@ -1,6 +1,6 @@
 import Product from "./Product.jsx";
 
-function Shop({ items }) {
+function Shop({ items, addToCart }) {
     return (
         <main>
             {items.map((item) => (
@@ -9,6 +9,7 @@ function Shop({ items }) {
                     id={item.id}
                     title={item.title}
                     imageUrl={item.image}
+                    addToCart={addToCart}
                 />
             ))}
         </main>

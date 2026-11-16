@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-function Navbar() {
+function Navbar({ numItemsInCart }) {
     return (
         <header>
             <nav>
@@ -11,8 +11,8 @@ function Navbar() {
                     <Link to="shop">Shop</Link>
                 </div>
                 <div>
-                    <Link to="cart">Cart</Link>
-                </div> 
+                    <Link to="cart">Cart - {numItemsInCart}</Link>
+                </div>
             </nav>
         </header>
     );
