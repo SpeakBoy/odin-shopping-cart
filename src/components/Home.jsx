@@ -4,7 +4,7 @@ import silverShoppingCart from "./../assets/silver-shopping-cart.png";
 function Home() {
     return (
         <main>
-            <h1>Shopping Cart</h1>
+            <h1>Home</h1>
             <p>This app lets you "shop" for items! Shop away!</p>
             <img src={goldShoppingCart} alt="Gold shopping cart" />
             <img src={silverShoppingCart} alt="Silver shopping cart" />
