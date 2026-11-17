@@ -1,6 +1,5 @@
-import { vi, describe, it, expect } from "vitest";
+import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import Cart from "../components/Cart.jsx";
 
 describe("Cart component", () => {
@@ -13,7 +12,7 @@ describe("Cart component", () => {
     });
 
     it("renders correct number of products in cart", () => {
-        const { container } = render(<Cart products={[{}, {}, {}]} />);
+        const { container } = render(<Cart products={[{ id: 1 }, { id: 2 }, { id: 3 }]} />);
 
         const productDivs = container.querySelectorAll("div.product");
 
