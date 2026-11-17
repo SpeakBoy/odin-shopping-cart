@@ -5,12 +5,14 @@ function ShopProduct({ product, addToCart }) {
         <div className={styles.product}>
             <h2>{product.title}</h2>
             <img src={product.image} className={styles.image} />
-            <form onSubmit={(e) => addToCart(e, product.id)} className={styles.form} >
+            <form onSubmit={(e) => addToCart(e, product.id)} className={styles.form}>
                 <div className={styles.input}>
                     <label htmlFor="quantity">Quantity:</label>
                     <input id="quantity" name="quantity" type="number" min="1" defaultValue="1" />
                 </div>
-                <button type="submit" className={styles.add}>+</button>
+                <button type="submit" className={styles.add}>
+                    +
+                </button>
             </form>
         </div>
     );

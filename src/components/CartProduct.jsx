@@ -10,9 +10,21 @@ function CartProduct({ product, decrementProduct, incrementProduct, removeFromCa
                     <p>Quantity - {product.quantity}</p>
                 </div>
                 <div className={styles.buttons}>
-                    <button className={styles.remove} onClick={() => removeFromCart(product.id)}>X</button>
-                    <button className={styles.decrement} onClick={() => decrementProduct(product.id)}>-</button>
-                    <button className={styles.increment} onClick={() => incrementProduct(product.id)}>+</button>
+                    <button className={styles.remove} onClick={() => removeFromCart(product.id)}>
+                        X
+                    </button>
+                    <button
+                        className={styles.decrement}
+                        onClick={() => decrementProduct(product.id)}
+                    >
+                        -
+                    </button>
+                    <button
+                        className={styles.increment}
+                        onClick={() => incrementProduct(product.id)}
+                    >
+                        +
+                    </button>
                 </div>
             </div>
         </div>

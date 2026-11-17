@@ -14,6 +14,6 @@ describe("Cart component", () => {
     it("renders correct number of products in cart", () => {
         render(<Cart products={[{ id: 1 }, { id: 2 }, { id: 3 }]} />);
 
-        expect(screen.getAllByText( /quantity/i )).toHaveLength(3);
+        expect(screen.getAllByText(/quantity/i)).toHaveLength(3);
     });
 });
