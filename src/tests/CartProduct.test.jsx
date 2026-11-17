@@ -29,7 +29,7 @@ describe("CartProduct component", () => {
 
         const { rerender } = render(<CartProduct product={product} decrementProduct={decrement} />);
 
-        const decrementButton = screen.getByRole("button", { name: "Decrement" });
+        const decrementButton = screen.getByRole("button", { name: "-" });
 
         await user.click(decrementButton);
 
@@ -48,7 +48,7 @@ describe("CartProduct component", () => {
 
         const { rerender } = render(<CartProduct product={product} incrementProduct={increment} />);
 
-        const incrementButton = screen.getByRole("button", { name: "Increment" });
+        const incrementButton = screen.getByRole("button", { name: "+" });
 
         await user.click(incrementButton);
 

@@ -10,10 +10,8 @@ describe("Shop component", () => {
     });
 
     it("renders correct number of products in cart", () => {
-        const { container } = render(<Shop products={[{ id: 1 }, { id: 2 }]} />);
+        render(<Shop products={[{ id: 1 }, { id: 2 }]} />);
 
-        const productDivs = container.querySelectorAll("div.product");
-
-        expect(productDivs).toHaveLength(2);
+        expect(screen.getAllByText(/quantity/i)).toHaveLength(2);
     });
 });
