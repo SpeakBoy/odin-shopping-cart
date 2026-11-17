@@ -46,6 +46,29 @@ function App() {
         e.target.reset();
     };
 
+    const decrementProductInCart = (id) => {
+        const quantityInCart = cart[id];
+        const newQuantity = quantityInCart - 1;
+
+        if (newQuantity === 0) {
+            return removeFromCart(id);
+        }
+
+        setCart({ ...cart, [id]: newQuantity });
+    };
+
+    const incrementProductInCart = (id) => {
+        const quantityInCart = cart[id];
+        const newQuantity = quantityInCart + 1;
+
+        setCart({ ...cart, [id]: newQuantity });
+    };
+
+    const removeFromCart = (id) => {
+        const { [id]: _, ...rest } = cart;
+        setCart(rest);
+    };
+
     return (
         <>
             <Navbar numItemsInCart={numItemsInCart} />
@@ -55,7 +78,17 @@ function App() {
                     path="shop"
                     element={<Shop products={shopProducts} addToCart={addToCart} />}
                 />
-                <Route path="cart" element={<Cart products={cartProducts} />} />
+                <Route
+                    path="cart"
+                    element={
+                        <Cart
+                            products={cartProducts}
+                            decrementProduct={decrementProductInCart}
+                            incrementProduct={incrementProductInCart}
+                            removeFromCart={removeFromCart}
+                        />
+                    }
+                />
             </Routes>
         </>
     );
