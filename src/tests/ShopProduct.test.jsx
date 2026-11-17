@@ -5,7 +5,7 @@ import ShopProduct from "../components/ShopProduct.jsx";
 
 describe("ShopProduct component", () => {
     it("renders correct heading", () => {
-        render (<ShopProduct product={{ title: "Very sick product!" }}/>);
+        render(<ShopProduct product={{ title: "Very sick product!" }} />);
         expect(screen.getByRole("heading").textContent).toMatch("Very sick product!");
     });
 
@@ -17,9 +17,9 @@ describe("ShopProduct component", () => {
     it("minimum quantity value is 1", async () => {
         const user = userEvent.setup();
 
-        render(<ShopProduct product={{}}/>);
+        render(<ShopProduct product={{}} />);
         const input = screen.getByRole("spinbutton");
-        
+
         await user.clear(input);
         await user.type(input, "0");
 
