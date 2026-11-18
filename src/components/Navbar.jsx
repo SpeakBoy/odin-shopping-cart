@@ -1,17 +1,18 @@
 import { Link } from "react-router";
+import styles from "../styles/Navbar.module.css";
 
 function Navbar({ numItemsInCart }) {
     return (
         <header>
-            <nav>
+            <nav className={styles.navbar}>
                 <div>
-                    <Link to="/">Home</Link>
+                    <Link className={styles.link} to="/">Home</Link>
                 </div>
                 <div>
-                    <Link to="shop">Shop</Link>
+                    <Link className={styles.link} to="shop">Shop</Link>
                 </div>
                 <div>
-                    <Link to="cart">Cart - {numItemsInCart}</Link>
+                    <Link className={styles.link} to="cart">Cart - {numItemsInCart}</Link>
                 </div>
             </nav>
         </header>
