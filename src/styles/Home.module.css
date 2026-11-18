@@ -1,0 +1,19 @@
+.container {
+    padding: 20px 100px;
+    background-color: aliceblue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    max-width: 500px;
+    background-color: whitesmoke;
+    border: 5px solid black;
+    border-radius: 5px;
+}
+
+.carts {
+    display: flex;
+    justify-content: space-around;
+}

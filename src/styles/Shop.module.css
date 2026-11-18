@@ -1,11 +1,12 @@
 .container {
     padding: 20px 100px;
     background-color: aliceblue;
-    height: 100vh;
+    max-height: 100vh;
 }
 
 .shop {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    padding-bottom: 40px;
 }

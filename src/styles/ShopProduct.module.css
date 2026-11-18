@@ -22,9 +22,9 @@
 
 .form {
     display: flex;
-    flex-direction: column;
     gap: 20px;
     width: 100%;
+    justify-content: space-between;
     align-items: center;
 }
 
