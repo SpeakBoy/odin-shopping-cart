@@ -10,7 +10,11 @@ function Home() {
                 <p>This app lets you "shop" for items! Shop away!</p>
                 <div className={styles.carts}>
                     <img className={styles.image} src={goldShoppingCart} alt="Gold shopping cart" />
-                    <img className={styles.image} src={silverShoppingCart} alt="Silver shopping cart" />
+                    <img
+                        className={styles.image}
+                        src={silverShoppingCart}
+                        alt="Silver shopping cart"
+                    />
                 </div>
             </div>
         </main>

@@ -4,6 +4,7 @@ import Home from "./Home.jsx";
 import Shop from "./Shop.jsx";
 import Cart from "./Cart.jsx";
 import { useEffect, useState } from "react";
+import "../styles/App.css";
 
 function App() {
     const [shopProducts, setShopProducts] = useState([]);

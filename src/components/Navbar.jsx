@@ -6,13 +6,19 @@ function Navbar({ numItemsInCart }) {
         <header>
             <nav className={styles.navbar}>
                 <div>
-                    <Link className={styles.link} to="/">Home</Link>
+                    <Link className={styles.link} to="/">
+                        Home
+                    </Link>
                 </div>
                 <div>
-                    <Link className={styles.link} to="shop">Shop</Link>
+                    <Link className={styles.link} to="shop">
+                        Shop
+                    </Link>
                 </div>
                 <div>
-                    <Link className={styles.link} to="cart">Cart - {numItemsInCart}</Link>
+                    <Link className={styles.link} to="cart">
+                        Cart - {numItemsInCart}
+                    </Link>
                 </div>
             </nav>
         </header>
